@@ -44,8 +44,8 @@ endif
 # Don't try to build/install the MacOS bundle if we are building libexult
 if !BUILD_LIBEXULT
 install-exec-local: bundle
-	mkdir -p $(DESTDIR)/Applications/
-	cp -r $(bundle_name) $(DESTDIR)/Applications/
+	mkdir -p $(NIX_DESTDIR)/Applications/
+	cp -r $(bundle_name) $(NIX_DESTDIR)/Applications/
 endif
 
 osxdmg: bundle
